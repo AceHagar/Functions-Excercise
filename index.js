@@ -63,3 +63,9 @@ function makeIsoscelesTriangle(height) {
    return triangle.slice(0, -1);
 }
 console.log(makeIsoscelesTriangle(5));
+
+function makeDiamond(height) {
+  return (makeIsoscelesTriangle(height) + '\n') + makeIsoscelesTriangle(height).split('').reverse().join('')
+  }
+
+console.log(makeDiamond(5))
